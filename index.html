@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Portfolio with Stars</title>
+  <title>ashish.systems</title>
   <style>
+
+    html {
+    scroll-behavior: smooth;
+  }
+
+
     html, body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #0d0d1f;
       color: white;
-      overflow: hidden;
+      height: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+      
     }
     nav {
       position: fixed;
@@ -30,6 +39,7 @@
       font-weight: bold;
       position: relative;
     }
+    
     nav a::after {
       content: '';
       display: block;
@@ -94,7 +104,51 @@
       left: 0;
     }
   </style>
-  <section id="products">
+  <head>
+  <meta charset="UTF-8">
+  <title>Your Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <style>
+    /* ScrollSpy Active Link Highlight */
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="cursor"></div>
+
+ <nav>
+  <a href="#">Home</a>
+  <a href="#products">Products</a>
+  <a href="#contacts">Contacts</a>
+  <a href="#terms">Terms & Conditions</a>
+  <a href="#support">Support</a>
+</nav>
+
+  <div class="hero">
+    <img src="photo.png" alt="My Photo">
+    <h1>Ashish</h1>
+    <div class="typed-text"></div>
+  </div>
+
+   <section id="products">
   <h2>Products</h2>
   <p>Here are some of the key products and projects I have worked on. Each of them reflects my passion for technology, problem-solving, and creating meaningful digital experiences.</p>
 
@@ -118,50 +172,105 @@
   </div>
 </section>
 
-</head>
-<body>
-  <div id="particles-js"></div>
-  <div class="cursor"></div>
 
-  <nav>
-    <a href="#products">Products</a>
-    <a href="#contacts">Contacts</a>
-    <a href="#terms">Terms & Conditions</a>
-    <a href="#support">Support</a>
-  </nav>
+<section id="contacts">
+  <h2>Contact Me</h2>
+  <p>If you would like to get in touch, feel free to use any of the methods below. I am always open to discussing projects, collaborations, or answering your questions.</p>
 
-  <div class="hero">
-    <img src="photo.png" alt="My Photo">
-    <h1>Ashish</h1>
-    <div class="typed-text"></div>
+  <div style="margin-top: 2rem;">
+    <h3>Email</h3>
+    <p>
+      <a href="as_hi_sh_@ashish.systems" style="color: cyan; text-decoration: none;">as_hi_sh_@ashish.systems</a>
+    </p>
   </div>
 
-  <section id="products">
-    <h2>Products</h2>
-    <p>Describe your products here...</p>
-  </section>
+  <div style="margin-top: 1rem;">
+    <h3>Phone</h3>
+    <p style="color: cyan;">+91 97710 53607</p>
+  </div>
 
-  <section id="contacts">
-    <h2>Contacts</h2>
-    <p>Contact details go here...</p>
-  </section>
+  <div style="margin-top: 1rem;">
+    <h3>LinkedIn</h3>
+    <p>
+      <a href="https://www.linkedin.com/in/as-hi-sh-/" target="_blank" style="color: cyan; text-decoration: none;">Ashish</a>
+    </p>
+  </div>
+
+  <div style="margin-top: 1rem;">
+    <h3>Address</h3>
+    <p>Jaipur, Rajasthan, India</p>
+  </div>
+</section>
+
 
   <section id="terms">
-    <h2>Terms & Conditions</h2>
-    <p>Terms and conditions content...</p>
-  </section>
+  <h2>Terms and Conditions</h2>
+  <p>By accessing and using this website, you agree to the following terms and conditions. Please read them carefully.</p>
+
+  <div style="margin-top: 1.5rem;">
+    <h3>1. Use of Content</h3>
+    <p>All content on this website is for personal and educational purposes only. You may not reproduce, distribute, or use the content commercially without explicit permission.</p>
+  </div>
+
+  <div style="margin-top: 1.5rem;">
+    <h3>2. Liability Disclaimer</h3>
+    <p>This website is provided "as is" without any warranties of any kind. I am not responsible for any damages arising from the use of this website.</p>
+  </div>
+
+  <div style="margin-top: 1.5rem;">
+    <h3>3. External Links</h3>
+    <p>This website may contain links to other websites. I am not responsible for the content or practices of external sites.</p>
+  </div>
+
+  <div style="margin-top: 1.5rem;">
+    <h3>4. Changes to Terms</h3>
+    <p>I reserve the right to modify these terms at any time. Changes will be posted on this page.</p>
+  </div>
+
+  <div style="margin-top: 1.5rem;">
+    <h3>5. Contact</h3>
+    <p>If you have any questions about these terms, please contact me via email.</p>
+  </div>
+</section>
+
 
   <section id="support">
-    <h2>Support</h2>
-    <p>Support information...</p>
-  </section>
+  <h2>Support</h2>
+  <p>If you need any assistance or have any questions, feel free to reach out. I am here to help you with your queries, technical issues, or project-related discussions.</p>
+
+  <div style="margin-top: 2rem;">
+    <h3>Contact Methods</h3>
+    <ul style="list-style: none; padding: 0;">
+      <li style="margin-bottom: 0.5rem;">
+        📧 Email: <a href="mailto:as_hi_sh_@ashish.systems" style="color: cyan; text-decoration: none;">as_hi_sh_@ashish.systems</a>
+      </li>
+      <li style="margin-bottom: 0.5rem;">
+        💬 WhatsApp: <a href="https://wa.me/919771053607" target="_blank" style="color: cyan; text-decoration: none;">+91 97710 53607</a>
+      </li>
+      <li style="margin-bottom: 0.5rem;">
+        🌐 LinkedIn: <a href="https://www.linkedin.com/in/as-hi-sh-/" target="_blank" style="color: cyan; text-decoration: none;">Ashish</a>
+      </li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <h3>FAQ</h3>
+    <p>Here are some frequently asked questions to help you:</p>
+    <ul style="list-style: disc; padding-left: 1.5rem;">
+      <li>How can I collaborate with you on a project?</li>
+      <li>What services do you offer?</li>
+      <li>How quickly do you respond to support requests?</li>
+    </ul>
+  </div>
+</section>
+
 
   <!-- Particles.js CDN -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     // Typewriter Animation
     const typedText = document.querySelector('.typed-text');
-    const phrases = ["Ashish", "Software Engineer", "Data Scientist", "Developer"];
+    const phrases = ["Freelancer", "Software Engineer", "Data Scientist", "Developer"];
     let i = 0;
     let j = 0;
     let currentPhrase = [];
