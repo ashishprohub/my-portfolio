@@ -4,6 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ashish.systems</title>
+<nav class="navbar">
+  <div class="logo">My Portfolio</div>
+  <div class="menu-toggle" id="mobile-menu">
+    &#9776;
+  </div>
+  <ul class="nav no-search">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#contacts">Contact</a></li>
+    <li><a href="#support">Support</a></li>
+    <li><a href="#terms">Terms</a></li>
+  </ul>
+</nav>
+
+
   <style>
 
     html {
@@ -22,36 +37,65 @@
       overflow-x: hidden;
       
     }
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.7);
-      display: flex;
-      justify-content: center;
-      padding: 1rem 0;
-      z-index: 10;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-    }
-    
-    nav a::after {
-      content: '';
-      display: block;
-      height: 2px;
-      background: cyan;
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-      transform-origin: left;
-    }
-    nav a:hover::after {
-      transform: scaleX(1);
-    }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+}
+
     .hero {
       text-align: center;
       padding-top: 120px;
@@ -310,11 +354,15 @@
           }
         }
       }
-      const spedUp = Math.random() * (40 -20) +20;
-      const normalSpeed = Math.random() * (100 -50) +50;
-      const time = isEnd ? 500 : isDeleting ? spedUp : normalSpeed;
-      setTimeout(loop, time);
+      const spedUp = Math.random() * (50 -30) +30;
+const normalSpeed = Math.random() * (150 -100) +100;
+const time = isEnd ? 800 : isDeleting ? spedUp : normalSpeed;
+setTimeout(loop, time);
+
     }
+
+    loop();
+
     // Mouse Cursor Tracking
     const cursor = document.querySelector('.cursor');
     document.addEventListener('mousemove', e => {
