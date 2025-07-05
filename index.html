@@ -3,28 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Portfolio</title>
+  <title>Your Portfolio with Stars</title>
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(-45deg, #1e1e2f, #2b2b4a, #3f3f5a, #1e1e2f);
-      background-size: 400% 400%;
-      animation: gradientMove 15s ease infinite;
+      background: #0d0d1f;
       color: white;
-      overflow-x: hidden;
-    }
-    @keyframes gradientMove {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+      overflow: hidden;
     }
     nav {
       position: fixed;
@@ -34,7 +21,7 @@
       display: flex;
       justify-content: center;
       padding: 1rem 0;
-      z-index: 1000;
+      z-index: 10;
     }
     nav a {
       color: white;
@@ -57,7 +44,9 @@
     }
     .hero {
       text-align: center;
-      padding-top: 100px;
+      padding-top: 120px;
+      position: relative;
+      z-index: 5;
     }
     .hero img {
       width: 150px;
@@ -76,7 +65,8 @@
     section {
       min-height: 100vh;
       padding: 3rem;
-      transition: background 0.3s ease;
+      position: relative;
+      z-index: 5;
     }
     section:hover {
       background: rgba(255, 255, 255, 0.05);
@@ -94,9 +84,19 @@
       transition: transform 0.1s ease;
       z-index: 9999;
     }
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #0d0d1f;
+      z-index: 0;
+      top: 0;
+      left: 0;
+    }
   </style>
 </head>
 <body>
+  <div id="particles-js"></div>
   <div class="cursor"></div>
 
   <nav>
@@ -107,7 +107,7 @@
   </nav>
 
   <div class="hero">
-    <img src="photo.png" alt="Your Photo">
+    <img src="photo.png" alt="My Photo">
     <h1>Ashish</h1>
     <div class="typed-text"></div>
   </div>
@@ -132,6 +132,8 @@
     <p>Support information...</p>
   </section>
 
+  <!-- Particles.js CDN -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     // Typewriter Animation
     const typedText = document.querySelector('.typed-text');
@@ -188,6 +190,67 @@
     document.addEventListener('mousemove', e => {
       cursor.style.top = e.clientY + 'px';
       cursor.style.left = e.clientX + 'px';
+    });
+
+    // Particles.js Configuration
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 100,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          }
+        },
+        "opacity": {
+          "value": 0.7,
+          "random": true,
+          "anim": {
+            "enable": false
+          }
+        },
+        "size": {
+          "value": 2,
+          "random": true,
+          "anim": {
+            "enable": false
+          }
+        },
+        "line_linked": {
+          "enable": false
+        },
+        "move": {
+          "enable": true,
+          "speed": 0.6,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false
+          },
+          "onclick": {
+            "enable": false
+          },
+          "resize": true
+        }
+      },
+      "retina_detect": true
     });
   </script>
 </body>
