@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashish • Elite Cyber Architect</title>
+    <title>Ashish • Developer • Hacker • Cyber Security</title>
     
     <!-- External Dependencies -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -405,6 +405,94 @@
         }
 
         /* ==========================================
+   📱 MOBILE MENU SYSTEM  
+========================================== */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 0.8rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+    background: rgba(0,255,65,0.1);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(20px);
+    border-left: 2px solid var(--primary);
+    z-index: 9999;
+    transition: right 0.4s ease;
+    padding: 2rem 1rem;
+    box-shadow: -5px 0 25px rgba(0,255,65,0.2);
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    margin-top: 4rem;
+}
+
+.mobile-nav ul li {
+    margin-bottom: 1.2rem;
+}
+
+.mobile-nav ul li a {
+    display: block;
+    padding: 1.2rem 1.5rem;
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid rgba(0,255,65,0.3);
+    border-radius: 15px;
+    background: rgba(0,255,65,0.08);
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.mobile-nav ul li a:hover {
+    background: rgba(0,255,65,0.2);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateX(10px);
+}
+
+.mobile-close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-close-btn:hover {
+    transform: rotate(90deg);
+    color: var(--secondary);
+}
+
+
+        /* ==========================================
            🎭 GLITCH & DISTORTION EFFECTS
         ========================================== */
         .glitch-overlay {
@@ -752,7 +840,184 @@
         /* ==========================================
            📱 MOBILE RESPONSIVE
         ========================================== */
-        @media (max-width: 768px) {
+        /* ==========================================
+   📱 ENHANCED MOBILE RESPONSIVE
+========================================== */
+@media (max-width: 768px) {
+    /* Disable cursor effects */
+    .cursor, 
+    .cursor-trail {
+        display: none !important;
+    }
+    
+    /* Navigation mobile layout */
+    .nav {
+        padding: 1rem 1.5rem;
+        border-radius: 0 0 20px 20px;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    /* Hero section mobile optimization */
+    .hero {
+        min-height: 85vh;
+        padding: 2rem 1rem;
+    }
+    
+    .glitch-text {
+        font-size: clamp(2.5rem, 12vw, 5rem);
+        margin-bottom: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+        text-align: center;
+        padding: 0 1rem;
+    }
+    
+    /* Button improvements */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .btn {
+        min-height: 52px;
+        padding: 1.3rem 2.5rem;
+        font-size: 1.1rem;
+        border-width: 3px;
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .btn:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+    
+    /* Section improvements */
+    .section {
+        padding: 5rem 1rem 3rem;
+    }
+    
+    .section h2 {
+        font-size: 2.8rem;
+        margin-bottom: 3rem;
+    }
+    
+    /* Grid layouts */
+    .grid {
+        gap: 2.5rem;
+        margin-top: 3rem;
+    }
+    
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Card improvements */
+    .card {
+        margin-bottom: 2rem;
+        border-radius: 25px;
+        border-width: 2px;
+    }
+    
+    .card:hover {
+        transform: translateY(-8px);
+    }
+    
+    /* Form improvements */
+    input, 
+    textarea {
+        min-height: 52px !important;
+        font-size: 16px !important;
+        padding: 1.3rem !important;
+        border-radius: 18px !important;
+    }
+    
+    /* Contact section mobile layout */
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem;
+    }
+    
+    /* Footer mobile optimization */
+    footer {
+        padding: 2.5rem 1rem 1.5rem;
+    }
+    
+    /* Performance optimizations */
+    .matrix {
+        opacity: 0.08 !important;
+    }
+    
+    .bubble-container {
+        display: none;
+    }
+    
+    .data-stream {
+        opacity: 0.05 !important;
+    }
+    
+    .circuit-board {
+        opacity: 0.02 !important;
+    }
+    
+    /* Disable heavy animations */
+    .glitch-text::before,
+    .glitch-text::after {
+        display: none;
+    }
+    
+    .card {
+        transform-style: flat !important;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .mobile-nav {
+        width: 85%;
+    }
+    
+    .glitch-text {
+        font-size: clamp(2rem, 15vw, 4rem);
+    }
+    
+    .section h2 {
+        font-size: 2.2rem;
+    }
+    
+    .hero {
+        padding: 1.5rem 0.8rem;
+    }
+    
+    .section {
+        padding: 4rem 0.8rem 2rem;
+    }
+    
+    .btn {
+        padding: 1.1rem 2rem;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
             .cursor, 
             .cursor-trail {
                 display: none;
@@ -998,15 +1263,37 @@
          🧭 NAVIGATION SYSTEM
     ========================================== -->
     <nav class="nav">
-        <div class="logo" data-text="ASHISH.SYSTEMS">ASHISH.SYSTEMS</div>
-        <ul class="nav-links">
-            <li><a href="#home" data-sound="hover">~/home</a></li>
-            <li><a href="#about" data-sound="hover">~/about</a></li>
-            <li><a href="#skills" data-sound="hover">~/skills</a></li>
-            <li><a href="#projects" data-sound="hover">~/projects</a></li>
-            <li><a href="#contact" data-sound="hover">~/contact</a></li>
-        </ul>
-    </nav>
+    <div class="logo" data-text="ASHISH.SYSTEMS">ASHISH.SYSTEMS</div>
+    
+    <!-- Desktop Navigation -->
+    <ul class="nav-links">
+        <li><a href="#home" data-sound="hover">~/home</a></li>
+        <li><a href="#about" data-sound="hover">~/about</a></li>
+        <li><a href="#skills" data-sound="hover">~/skills</a></li>
+        <li><a href="#projects" data-sound="hover">~/projects</a></li>
+        <li><a href="#contact" data-sound="hover">~/contact</a></li>
+    </ul>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<!-- Mobile Navigation Menu -->
+<div class="mobile-nav" id="mobile-nav">
+    <button class="mobile-close-btn" onclick="closeMobileMenu()">
+        <i class="fas fa-times"></i>
+    </button>
+    <ul>
+        <li><a href="#home" onclick="closeMobileMenu()">~/home</a></li>
+        <li><a href="#about" onclick="closeMobileMenu()">~/about</a></li>
+        <li><a href="#skills" onclick="closeMobileMenu()">~/skills</a></li>
+        <li><a href="#projects" onclick="closeMobileMenu()">~/projects</a></li>
+        <li><a href="#contact" onclick="closeMobileMenu()">~/contact</a></li>
+    </ul>
+</div>
+
 
     <!-- ==========================================
          🎯 HERO SECTION
@@ -1622,6 +1909,7 @@
         // 🧭 NAVIGATION SYSTEM
         // ==========================================
         
+        
         function initializeNavigation() {
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', (e) => {
@@ -1733,6 +2021,72 @@
         // 🚀 MAIN INITIALIZATION
         // ==========================================
         
+        // ==========================================
+// 📱 MOBILE MENU SYSTEM
+// ==========================================
+
+function initializeMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    
+    if (mobileMenuBtn && mobileNav) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            
+            // Update button icon with animation
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileNav.classList.contains('active')) {
+                icon.className = 'fas fa-times';
+                mobileMenuBtn.style.transform = 'rotate(90deg)';
+            } else {
+                icon.className = 'fas fa-bars';
+                mobileMenuBtn.style.transform = 'rotate(0deg)';
+            }
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Close menu on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMobileMenu();
+            }
+        });
+    }
+}
+
+function closeMobileMenu() {
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    
+    if (mobileNav && mobileMenuBtn) {
+        mobileNav.classList.remove('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.className = 'fas fa-bars';
+        mobileMenuBtn.style.transform = 'rotate(0deg)';
+    }
+}
+
+// Enhanced mobile navigation with smooth scrolling
+function handleMobileNavClick(targetId) {
+    closeMobileMenu();
+    setTimeout(() => {
+        const target = document.querySelector(targetId);
+        if (target) {
+            target.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start' 
+            });
+        }
+    }, 300);
+}
+
+
         document.addEventListener('DOMContentLoaded', function() {
             console.log('🚀 Quantum Systems Online...');
             
@@ -1744,6 +2098,7 @@
             initializeNavigation();
             initialize3DTilt();
             initializeEventListeners();
+            initializeMobileMenu();
             
             // Set current year
             document.getElementById('current-year').textContent = new Date().getFullYear();
